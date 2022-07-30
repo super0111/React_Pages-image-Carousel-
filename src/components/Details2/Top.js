@@ -42,11 +42,11 @@ const Top = () => {
               {
                 imgs.length && (
                   <Carousel viewportWidth="100%" cellPadding={5}>
-                      {imgs.map((img, i) => (
-                        <div className='item_field' key={i} onClick={() => setSlicder(i)}>
-                          <img src={img.url} />
-                        </div>
-                      ))}
+                    {imgs.map((img, i) => (
+                      <div className='item_field' key={i} onClick={() => setSlicder(i)}>
+                        <img src={img.url} />
+                      </div>
+                    ))}
                   </Carousel>
                 )
               }
@@ -156,68 +156,74 @@ const Top = () => {
                 marginTop: "5px"
               }}
             />
-            <Button
-              variant="contained"
-              sx={{
-                width: "150px",
-                margin: "10px 0"
-              }}
-            >
-              QUOTE
-            </Button>
-            <div className='title_mid'>Specifications For This Item</div>
-            <TableContainer 
-              component={Paper}
-              sx={{
-                width: "102%"
-              }}
-            >
-              <Table 
-                sx={{ 
-                  minWidth: 650, 
-                  background: "white", 
-                  borderRadius: "5px",
-                  overflowX:'auto'
-                }} 
-                responsive
-                aria-label="simple table"
-              >
-                <TableBody>
-                    <TableRow
-                      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                    >
-                      <TableCell component="th" scope="row">
-                        Cement Grade:
-                      </TableCell>
-                      <TableCell align="left" className='fontBold'>43 Grade</TableCell>
-                      <TableCell align="left">Form Factor:</TableCell>
-                      <TableCell align="left" className='fontBold'>Powder</TableCell>
-
-                    </TableRow>
-                    <TableRow
-                      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                    >
-                      <TableCell component="th" scope="row">
-                        Packaging Size:
-                      </TableCell>
-                      <TableCell align="left" className='fontBold'>25 Kg</TableCell>
-                      <TableCell align="left">Packaging Type:</TableCell>
-                      <TableCell align="left" className='fontBold'>Indoor</TableCell>
-                    </TableRow>
-                    <TableRow
-                      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                    >
-                      <TableCell component="th" scope="row">
-                        Packaging Type:
-                      </TableCell>
-                      <TableCell align="left" className='fontBold'>Paper Sack</TableCell>
-                      <TableCell align="left">Packaging Type:</TableCell>
-                      <TableCell align="left" className='fontBold'>All Purpose Cement</TableCell>
-                    </TableRow>
-                </TableBody>
-              </Table>
-            </TableContainer>
           </Grid>
+          <Button
+            variant="contained"
+            sx={{
+              width: "127px",
+              margin: "10px 0",
+              color: "white",
+              borderColor: "#212738",
+              background: "#212738",
+              "&:hover": {
+                background: '#2a3040'
+              }
+            }}
+          >
+            QUOTE
+          </Button>
+          <div className='title_mid'>Specifications For This Item</div>
+          <TableContainer 
+            component={Paper}
+            sx={{
+              width: "100%"
+            }}
+          >
+            <Table 
+              sx={{ 
+                minWidth: 650, 
+                background: "white", 
+                borderRadius: "5px",
+                overflowX:'auto'
+              }} 
+              responsive
+              aria-label="simple table"
+            >
+              <TableBody>
+                <TableRow
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    Cement Grade:
+                  </TableCell>
+                  <TableCell align="left" className='fontBold'>43 Grade</TableCell>
+                  <TableCell align="left">Form Factor:</TableCell>
+                  <TableCell align="left" className='fontBold'>Powder</TableCell>
+
+                </TableRow>
+                <TableRow
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    Packaging Size:
+                  </TableCell>
+                  <TableCell align="left" className='fontBold'>25 Kg</TableCell>
+                  <TableCell align="left">Packaging Type:</TableCell>
+                  <TableCell align="left" className='fontBold'>Indoor</TableCell>
+                </TableRow>
+                <TableRow
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    Packaging Type:
+                  </TableCell>
+                  <TableCell align="left" className='fontBold'>Paper Sack</TableCell>
+                  <TableCell align="left">Packaging Type:</TableCell>
+                  <TableCell align="left" className='fontBold'>All Purpose Cement</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
         </Grid>
       </Grid>
     </div>

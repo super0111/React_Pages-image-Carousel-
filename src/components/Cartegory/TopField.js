@@ -71,7 +71,6 @@ const TopField = () => {
               backgroundColor: "#D9D9D9",
             }}
           >
-            <div ></div>
           </Grid>
         </Box>
       </Grid>

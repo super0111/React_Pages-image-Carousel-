@@ -29,7 +29,7 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background-color: #c3e8e7;
+      background-color: #F8EBE2;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -103,7 +103,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: white;
+      background-color: #F8F8F8;
       border-radius: 5px;
       img {
         width: 55%;
@@ -116,7 +116,7 @@
       align-items: center;
       margin-top: 10px;
       .item_field {
-        background-color: #d0e7da;
+        background-color: #F8F8F8;
         border-radius: 5px;
         padding: 5px;
         width: 80px;
@@ -269,6 +269,12 @@
   }
 }
 
+th,td {
+  width: 50px;
+  overflow-x: scroll;
+  text-align: center;
+}
+
 .details2 {
   padding: 50px;
   .top {
@@ -304,7 +310,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: white;
+      background-color: #F8F8F8;
       border-radius: 5px;
       img {
         width: 55%;
@@ -317,7 +323,7 @@
       align-items: center;
       margin-top: 10px;
       .item_field {
-        background-color: #d0e7da;
+        background-color: #F8F8F8;
         border-radius: 5px;
         padding: 5px;
         width: 80px;

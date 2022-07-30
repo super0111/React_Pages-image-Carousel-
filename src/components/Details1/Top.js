@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Paper, TableContainer, Table, TableBody, TableCell, TableRow  } from '@mui/material'; 
+import { Box, Button, Grid, Paper, TableContainer, Table, TableBody, TableCell, TableRow, TextField  } from '@mui/material'; 
 import { useState } from 'react';
 import { BsChevronRight } from "react-icons/bs";
 import Carousel from "react-img-carousel";
@@ -12,6 +12,7 @@ const imgs =  [
 
 const Top = () => {
   const [ slider, setSlicder ] = useState(0);
+  const [ isShow, setIsShow ] = useState(true);
 
   const handleSlider = () => {
     if(slider < imgs.length-1) {
@@ -74,16 +75,112 @@ const Top = () => {
                 width: "150px",
                 fontSize: "14px",
                 margin: "5px 0",
+                color: "#212738",
+                borderColor: "#212738"
               }}
+              onClick={()=>setIsShow(!isShow)}
             >
               Quick Quote
             </Button>
+            { isShow === true ?
+              <Grid container
+                sx={{
+                  justifyContent: "space-between"
+                }}
+              >
+                <Grid md={6} sm={6} xs={12}
+                  sx={{
+                    maxWidth: "48%",
+                    '@media (max-width: 900px)' : {
+                      maxWidth: "100%",
+                    }
+                  }}
+                >
+                  <div className='dflex'>
+                    <strong>Quantity</strong>
+                    <TextField
+                      sx={{
+                        width: "90%",
+                        marginTop: "5px",
+                        '@media (max-width: 900px)' : {
+                          width: "100%",
+                        }
+                      }}
+                      fullWidth
+                      placeholder='director kyc'
+                      className='text_input'
+                    />
+                  </div>
+                  <div className='dflex'>
+                    <strong>Price Target</strong>
+                    <TextField
+                      sx={{
+                        width: "90%",
+                        marginTop: "5px",
+                        '@media (max-width: 900px)' : {
+                          width: "100%",
+                        }
+                      }}
+                      placeholder='director kyc'
+                      className='text_input'
+                    />
+                  </div>
+                </Grid>
+                <Grid md={6} sm={6} xs={12}
+                  sx={{
+                    maxWidth: "48%",
+                    '@media (max-width: 900px)' : {
+                      maxWidth: "100%",
+                    }
+                  }}
+                >
+                  <div className='dflex'>
+                    <strong>Delivery Date</strong>
+                    <TextField
+                      sx={{
+                        width: "90%",
+                        marginTop: "5px",
+                        '@media (max-width: 900px)' : {
+                          width: "100%",
+                        }
+                      }}
+                      placeholder='director kyc'
+                      className='text_input'
+                    />
+                  </div>
+                  <div className='dflex'>
+                    <strong>Delivery Frequency</strong>
+                    <TextField
+                      sx={{
+                        width: "90%",
+                        marginTop: "5px",
+                        '@media (max-width: 900px)' : {
+                          width: "100%",
+                        }
+                      }}
+                      placeholder='director kyc'
+                      className='text_input'
+                    />
+                  </div>
+                </Grid>
+                <strong>Delivery Location</strong>
+                <TextField
+                  fullWidth
+                  placeholder='director kyc'
+                  className='text_input'
+                  sx={{
+                    marginTop: "5px"
+                  }}
+                />
+              </Grid> : "" }
             <Button
               variant="outlined"
               sx={{
                 width: "150px",
                 fontSize: "14px",
                 margin: "5px 0 10px 0",
+                color: "#212738",
+                borderColor: "#212738"
               }}
             >
               Add To Cart
@@ -94,7 +191,7 @@ const Top = () => {
           <TableContainer 
             component={Paper}
             sx={{
-              width: "102%"
+              width: "100%"
             }}
           >
             <Table 
@@ -107,43 +204,42 @@ const Top = () => {
               aria-label="simple table"
             >
               <TableBody>
-                  <TableRow
-                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                  >
-                    <TableCell component="th" scope="row">
-                      Cement Grade:
-                    </TableCell>
-                    <TableCell align="left" className='fontBold'>43 Grade</TableCell>
-                    <TableCell align="left">Form Factor:</TableCell>
-                    <TableCell align="left" className='fontBold'>Powder</TableCell>
+                <TableRow
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    Cement Grade:
+                  </TableCell>
+                  <TableCell align="left" className='fontBold'>43 Grade</TableCell>
+                  <TableCell align="left">Form Factor:</TableCell>
+                  <TableCell align="left" className='fontBold'>Powder</TableCell>
 
-                  </TableRow>
-                  <TableRow
-                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                  >
-                    <TableCell component="th" scope="row">
-                      Packaging Size:
-                    </TableCell>
-                    <TableCell align="left" className='fontBold'>25 Kg</TableCell>
-                    <TableCell align="left">Packaging Type:</TableCell>
-                    <TableCell align="left" className='fontBold'>Indoor</TableCell>
-                  </TableRow>
-                  <TableRow
-                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                  >
-                    <TableCell component="th" scope="row">
-                      Packaging Type:
-                    </TableCell>
-                    <TableCell align="left" className='fontBold'>Paper Sack</TableCell>
-                    <TableCell align="left">Packaging Type:</TableCell>
-                    <TableCell align="left" className='fontBold'>All Purpose Cement</TableCell>
-                  </TableRow>
+                </TableRow>
+                <TableRow
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    Packaging Size:
+                  </TableCell>
+                  <TableCell align="left" className='fontBold'>25 Kg</TableCell>
+                  <TableCell align="left">Packaging Type:</TableCell>
+                  <TableCell align="left" className='fontBold'>Indoor</TableCell>
+                </TableRow>
+                <TableRow
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    Packaging Type:
+                  </TableCell>
+                  <TableCell align="left" className='fontBold'>Paper Sack</TableCell>
+                  <TableCell align="left">Packaging Type:</TableCell>
+                  <TableCell align="left" className='fontBold'>All Purpose Cement</TableCell>
+                </TableRow>
               </TableBody>
             </Table>
           </TableContainer>
         </Grid>
       </Grid>
-
     </div>
   )
 }
