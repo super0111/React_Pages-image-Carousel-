@@ -66,19 +66,6 @@ const Top = () => {
           <p>This grade of cement is used for plain concrete work and plastering works. It is suitable make concrete mix up to M30.</p>
           <p>Cement is mainly used as a binder in concrete, which is a basic material for all types of construction, including housing, roads, schools, hospitals, dams and ports.</p>
           <Box display='flex' flexDirection="column">
-            <Button
-              variant="outlined"
-              sx={{
-                width: "150px",
-                fontSize: "14px",
-                margin: "5px 0",
-                color: "#212738",
-                borderColor: "#212738"
-              }}
-              onClick={()=>setIsShow(!isShow)}
-            >
-              Quick Quote
-            </Button>
             { isShow === true ?
               <Grid container
                 sx={{
@@ -169,7 +156,21 @@ const Top = () => {
                     marginTop: "5px"
                   }}
                 />
-              </Grid> : "" }
+              </Grid> 
+            : "" }
+            <Button
+              variant="outlined"
+              sx={{
+                width: "150px",
+                fontSize: "14px",
+                margin: "15px 0 5px 0",
+                color: "#212738",
+                borderColor: "#212738"
+              }}
+              onClick={()=>setIsShow(!isShow)}
+            >
+              Quick Quote
+            </Button>
             <Button
               variant="outlined"
               sx={{

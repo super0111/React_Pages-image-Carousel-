@@ -74,7 +74,7 @@
     }
     .image_field {
       background-color: #F2F2F2;
-      height: 125px;
+      height: 145px;
       .img {
         width: 100%;
       }
@@ -99,6 +99,9 @@
 .details1 {
   padding: 50px;
   .top {
+    .dflex {
+      margin: 20px 0;
+    }
     .fontBold {
       font-weight: 600;
     }
@@ -300,16 +303,15 @@ th,td {
     .title_md {
       font-size: 18px;
       font-weight: 600;
-      margin: 20px 0;
+      margin: 20px 0 0 0;
     }
     .dflex {
       display: flex;
       flex-direction: column;
-      margin: 8px 0;
+      margin: 20px 0;
       margin-right: 5px;
       strong {
         color: rgb(98, 97, 97);
-        margin-bottom: 5px;
       }
     }
     .title_text {

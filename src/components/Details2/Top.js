@@ -158,7 +158,8 @@ const Top = () => {
             variant="contained"
             sx={{
               width: "127px",
-              margin: "10px 0",
+              height: "45px",
+              margin: "20px 0 0 0",
               color: "white",
               borderColor: "#212738",
               background: "#212738",
@@ -169,11 +170,12 @@ const Top = () => {
           >
             QUOTE
           </Button>
-          <div className='title_mid'>Specifications For This Item</div>
+          <div className='title_md'>Specifications For This Item</div>
           <TableContainer 
             component={Paper}
             sx={{
-              width: "100%"
+              width: "100%",
+              marginTop: "20px"
             }}
           >
             <Table 
