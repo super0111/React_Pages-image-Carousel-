@@ -12,14 +12,7 @@ const imgs =  [
 ]
 
 const Top = () => {
-  const [ slider, setSlicder ] = useState(0);
-
-  const handleSlider = () => {
-    if(slider < imgs.length-1) {
-      setSlicder(slider+1)
-    }
-    if(slider >= imgs.length ) { return }
-  }
+  const [ selectedImg, setSelectedImg ] = useState(0);
 
   return (
     <div className="top">
@@ -36,14 +29,18 @@ const Top = () => {
         >
           <Box display="flex" flexDirection="column" justifyContent="space-between">
             <div className='img_field'>
-              <img src={imgs[slider].url}/>
+              <img src={imgs[selectedImg].url}/>
             </div>
             <div className='img_item'>
               {
                 imgs.length && (
-                  <Carousel viewportWidth="100%" cellPadding={5}>
+                  <Carousel 
+                    viewportWidth="100%" 
+                    cellPadding={5}
+                    afterChange={(newIndex) => setSelectedImg(newIndex)}
+                  >
                     {imgs.map((img, i) => (
-                      <div className='item_field' key={i} onClick={() => setSlicder(i)}>
+                      <div className='item_field' key={i} onClick={() => setSelectedImg(i)}>
                         <img src={img.url} />
                       </div>
                     ))}

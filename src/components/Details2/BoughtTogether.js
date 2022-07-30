@@ -23,7 +23,14 @@ const BoughtTogether = () => {
       </div>
       {
         items.length && (
-          <Carousel viewportWidth="100%" cellPadding={5}>
+          <Carousel 
+            viewportWidth="100%" 
+            cellPadding={40} 
+            imagesToPrefetch={4}
+            lazyLoad={false}
+            maxRenderedSlides={4}
+            slideAlignment={'left'}
+          >
               {items.map((item) => (
                 <div className="item">
                   <div className="img_field">

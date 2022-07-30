@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from '@mui/material';
-
 import Carousel from "react-img-carousel";
 require("react-img-carousel/lib/carousel.css");
 
@@ -9,9 +8,12 @@ const items = [
   { url: "/images/details/1 (4).png", title: "Dr.Fixit", details: "Dr. Fixit 604 Primeseal acrylic coating For External Wall Waterproofing Crack Filler  (1 L)", btn: "Add To Quote" },
   { url: "/images/details/1 (5).png", title: "Dr.Fixit", details: "Dr. Fixit 604 Primeseal acrylic coating For External Wall Waterproofing Crack Filler  (1 L)", btn: "Add To Quote" },
   { url: "/images/details/1 (5).png", title: "Dr.Fixit", details: "Dr. Fixit 604 Primeseal acrylic coating For External Wall Waterproofing Crack Filler  (1 L)", btn: "Add To Quote" },
+  { url: "/images/details/1 (1).png", title: "Dr.Fixit", details: "Dr. Fixit 604 Primeseal acrylic coating For External Wall Waterproofing Crack Filler  (1 L)", btn: "Add To Quote" },
+  { url: "/images/details/1 (4).png", title: "Dr.Fixit", details: "Dr. Fixit 604 Primeseal acrylic coating For External Wall Waterproofing Crack Filler  (1 L)", btn: "Add To Quote" },
   { url: "/images/details/1 (5).png", title: "Dr.Fixit", details: "Dr. Fixit 604 Primeseal acrylic coating For External Wall Waterproofing Crack Filler  (1 L)", btn: "Add To Quote" },
   { url: "/images/details/1 (5).png", title: "Dr.Fixit", details: "Dr. Fixit 604 Primeseal acrylic coating For External Wall Waterproofing Crack Filler  (1 L)", btn: "Add To Quote" },
-  { url: "/images/details/1 (5).png", title: "Dr.Fixit", details: "Dr. Fixit 604 Primeseal acrylic coating For External Wall Waterproofing Crack Filler  (1 L)", btn: "Add To Quote" },
+  { url: "/images/details/1 (1).png", title: "Dr.Fixit", details: "Dr. Fixit 604 Primeseal acrylic coating For External Wall Waterproofing Crack Filler  (1 L)", btn: "Add To Quote" },
+  { url: "/images/details/1 (4).png", title: "Dr.Fixit", details: "Dr. Fixit 604 Primeseal acrylic coating For External Wall Waterproofing Crack Filler  (1 L)", btn: "Add To Quote" },
   { url: "/images/details/1 (5).png", title: "Dr.Fixit", details: "Dr. Fixit 604 Primeseal acrylic coating For External Wall Waterproofing Crack Filler  (1 L)", btn: "Add To Quote" },
   { url: "/images/details/1 (5).png", title: "Dr.Fixit", details: "Dr. Fixit 604 Primeseal acrylic coating For External Wall Waterproofing Crack Filler  (1 L)", btn: "Add To Quote" },
 ]
@@ -24,7 +26,14 @@ const BoughtTogether = () => {
       </div>
       {
         items.length && (
-          <Carousel viewportWidth="100%" cellPadding={5}>
+          <Carousel 
+            viewportWidth="100%" 
+            cellPadding={40} 
+            imagesToPrefetch={4}
+            lazyLoad={false}
+            maxRenderedSlides={4}
+            slideAlignment={'left'}
+          >
             {items.map((item) => (
               <div className="item">
                 <div className="img_field">

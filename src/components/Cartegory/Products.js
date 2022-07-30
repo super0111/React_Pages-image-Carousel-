@@ -1,4 +1,4 @@
-import { Grid, } from '@mui/material';
+import { Grid } from '@mui/material';
 
 const items1 = [
   { title: "Square GI Pipe", text: "Metal & Alloy", url:"/images/cartegory/product1 (1).png" },
@@ -21,15 +21,14 @@ const Products = () => {
   return (
     <div className="products">
       <div className="title">Products</div>
-      <Grid 
-        container
+      <Grid container
         sx={{
           justifyContent: "space-between"
         }}
       >
         {
           items1.map((item, i)=>(
-          <Grid md={2} sm={3} xs={6}
+          <Grid item md={2} sm={3} xs={6} key={i}
             sx={{
               maxWidth: "200px !important",
               boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25), 0px 2px 4px rgba(0, 0, 0, 0.25)",
@@ -60,7 +59,7 @@ const Products = () => {
       >
         {
           items1.map((item, i)=>(
-          <Grid md={2} sm={3} xs={6}
+          <Grid item md={2} sm={3} xs={6} key={i}
             sx={{
               maxWidth: "200px !important",
               boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25), 0px 2px 4px rgba(0, 0, 0, 0.25)",

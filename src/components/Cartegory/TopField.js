@@ -65,8 +65,7 @@ const TopField = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid
-            item md={10} sm={6} xs={12}
+          <Grid item md={10} sm={6} xs={12}
             sx={{
               backgroundColor: "#D9D9D9",
             }}

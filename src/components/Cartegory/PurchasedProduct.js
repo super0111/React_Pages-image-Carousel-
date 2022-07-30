@@ -1,11 +1,17 @@
-import { Box, Grid, } from '@mui/material';
-import { BsChevronRight } from "react-icons/bs";
-
+import { Box } from '@mui/material';
+import Carousel from "react-img-carousel";
+require("react-img-carousel/lib/carousel.css");
 
 const items = [
   { text: "TMT Tuber", url: "/images/cartegory/Intersect.png" },
   { text: "RMC", url: "/images/cartegory/istockphoto-987409372-170667a 3.png" },
   { text: "White ASiancs", url: "/images/cartegory/5-gallon-bucket-mockup-front-view_1332-5974 2.png" },
+  { text: "Wire", url: "/images/cartegory/Intersect.png" },
+  { text: "Sofa", url: "/images/cartegory/istockphoto-987409372-170667a 3.png" },
+  { text: "Plywood", url: "/images/cartegory/5-gallon-bucket-mockup-front-view_1332-5974 2.png" },
+  { text: "TMT Bars", url: "/images/cartegory/Intersect.png" },
+  { text: "Cement", url: "/images/cartegory/istockphoto-987409372-170667a 3.png" },
+  { text: "Paint", url: "/images/cartegory/5-gallon-bucket-mockup-front-view_1332-5974 2.png" },
   { text: "Wire", url: "/images/cartegory/Intersect.png" },
   { text: "Sofa", url: "/images/cartegory/istockphoto-987409372-170667a 3.png" },
   { text: "Plywood", url: "/images/cartegory/5-gallon-bucket-mockup-front-view_1332-5974 2.png" },
@@ -30,7 +36,34 @@ const PurchasedProduct = () => {
         <div className='title'>
           Frequestly purcharged product
         </div>
-        <Grid container>
+
+        {
+        items.length && (
+          <Carousel
+            viewportWidth="100%"
+            cellPadding={50} 
+            // centerMode={false} 
+            centerSlidePercentage={false}
+            imagesToPrefetch={15}
+            lazyLoad={false}
+            maxRenderedSlides={15}
+            slideAlignment={'left'}
+          >
+            {items.map((item, i) => (
+              <div className="item" key={i}>
+                <div className='img_field'>
+                  <img src={item.url} />
+                </div>
+                <div className="text">
+                  {item.text}
+                </div>
+              </div>
+            ))}
+          </Carousel>
+        )
+      }
+
+        {/* <Grid container>
           {
             items.map((item, i)=> (
               <Grid item md={1} sm={2} xs={3} 
@@ -63,7 +96,7 @@ const PurchasedProduct = () => {
               </div>
             </div>
           </Grid>
-        </Grid>
+        </Grid> */}
       </Box>
     </div>
   )
