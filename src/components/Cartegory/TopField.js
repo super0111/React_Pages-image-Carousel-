@@ -72,7 +72,6 @@ const TopField = () => {
               borderRadius: "5px",
               width: "100%",
               height: { lg: "auto", md: "auto", sm: "auto", xs: "300px" },
-
             }}
           >
           </Grid>

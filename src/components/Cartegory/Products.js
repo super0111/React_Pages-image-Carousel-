@@ -26,8 +26,7 @@ const Products = () => {
           justifyContent: "space-between"
         }}
       >
-        {
-          items1.map((item, i)=>(
+        { items1.map((item, i)=>(
           <Grid item md={2} sm={3} xs={12} key={i}
             sx={{
               maxWidth: "200px !important",
@@ -50,18 +49,16 @@ const Products = () => {
             <div className='item_text'>
               {item.text}
             </div>
-          </Grid>
+          </Grid> 
         ))}
       </Grid>
-      <Grid 
-        container
+      <Grid container
         sx={{
           justifyContent: "space-between",
           marginTop: "20px"
         }}
       >
-        {
-          items1.map((item, i)=>(
+        { items1.map((item, i)=>(
           <Grid item md={2} sm={3} xs={12} key={i}
             sx={{
               maxWidth: "200px !important",

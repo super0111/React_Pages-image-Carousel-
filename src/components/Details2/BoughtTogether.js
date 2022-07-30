@@ -31,28 +31,27 @@ const BoughtTogether = () => {
             maxRenderedSlides={4}
             slideAlignment={'left'}
           >
-              {items.map((item) => (
-                <div className="item">
-                  <div className="img_field">
-                    <img width="180px" height="190px" src={item.url} alt="image" />
-                  </div>
-
-                  <div className='body'>
-                    <div className='title'>{item.title}</div>
-                    <div className='text'>{item.details}</div>
-                    <Button
-                      variant="outlined"
-                      sx={{
-                        width: "140px",
-                        fontSize: "13px",
-                        margin: "auto",
-                      }}
-                    >
-                        {item.btn}
-                    </Button>
-                  </div>
+            {items.map((item) => (
+              <div className="item">
+                <div className="img_field">
+                  <img width="180px" height="190px" src={item.url} alt="image" />
                 </div>
-              ))}
+                <div className='body'>
+                  <div className='title'>{item.title}</div>
+                  <div className='text'>{item.details}</div>
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      width: "140px",
+                      fontSize: "13px",
+                      margin: "auto",
+                    }}
+                  >
+                    {item.btn}
+                  </Button>
+                </div>
+              </div>
+            ))}
           </Carousel>
         )
       }
