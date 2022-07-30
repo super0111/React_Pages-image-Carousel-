@@ -28,7 +28,7 @@ const BoughtTogether = () => {
         items.length && (
           <Carousel 
             viewportWidth="100%" 
-            cellPadding={40} 
+            cellPadding={15} 
             imagesToPrefetch={4}
             lazyLoad={false}
             maxRenderedSlides={4}

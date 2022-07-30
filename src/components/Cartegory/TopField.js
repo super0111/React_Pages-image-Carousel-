@@ -25,11 +25,12 @@ const TopField = () => {
           <Grid item md={2} sm={6} xs={12}>
             <Box
               sx={{
-                maxWidth: "80% !important",
+                maxWidth: { md: "80% !important", sm: "80% !important", xs: "100% !important" },
+                margin: { md: "0", xs: "5px 0" },
                 padding: "10px",
                 boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.25), 0px 2px 4px rgba(0, 0, 0, 0.25)",
                 borderRadius: "8px",
-                backgroundColor: "white"
+                backgroundColor: "white",
               }}
             >
               <div className='header_title'>
@@ -68,6 +69,10 @@ const TopField = () => {
           <Grid item md={10} sm={6} xs={12}
             sx={{
               backgroundColor: "#D9D9D9",
+              borderRadius: "5px",
+              width: "100%",
+              height: { lg: "auto", md: "auto", sm: "auto", xs: "300px" },
+
             }}
           >
           </Grid>

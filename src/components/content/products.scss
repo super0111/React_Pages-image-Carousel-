@@ -2,7 +2,7 @@
   padding: 20px;
   .dflex {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
   }
   .header_title {
     margin-bottom: 10px;
@@ -81,10 +81,17 @@
     }
   }
 
-  @media screen and (max-width: "768px ") {
+  @media screen and (max-width: "452px") {
+    .products {
+      .image_field {
+        background-color: #F2F2F2;
+        height: auto;
+      }
+    }
     .dflex {
       // display: flex;
       // flex-direction: column;
+      // justify-content: center;
     }
   }
 }

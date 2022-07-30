@@ -28,14 +28,17 @@ const Products = () => {
       >
         {
           items1.map((item, i)=>(
-          <Grid item md={2} sm={3} xs={6} key={i}
+          <Grid item md={2} sm={3} xs={12} key={i}
             sx={{
               maxWidth: "200px !important",
               boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25), 0px 2px 4px rgba(0, 0, 0, 0.25)",
               borderRadius: "8px",
               padding: "10px",
               backgroundColor: "white",
-              margin: "5px 3px 0 3px"
+              margin: "5px 3px 0 3px",
+              '@media (max-width: 452px)' : {
+                maxWidth: "100% !important",
+              },
              }}
           >
             <div className="image_field">
@@ -59,15 +62,17 @@ const Products = () => {
       >
         {
           items1.map((item, i)=>(
-          <Grid item md={2} sm={3} xs={6} key={i}
+          <Grid item md={2} sm={3} xs={12} key={i}
             sx={{
               maxWidth: "200px !important",
               boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25), 0px 2px 4px rgba(0, 0, 0, 0.25)",
               borderRadius: "8px",
               padding: "10px",
               backgroundColor: "white",
-              margin: "5px 3px 0 3px"
-
+              margin: "5px 3px 0 3px",
+              '@media (max-width: 452px)' : {
+                maxWidth: "100% !important",
+              },
              }}
           >
             <div className="image_field">
