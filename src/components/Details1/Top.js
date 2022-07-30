@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { BsChevronRight } from "react-icons/bs";
 import Carousel from "react-img-carousel";
 
-
 const imgs =  [
   { url: "/images/details/1 (4).png" },
   { url: "/images/details/1 (1).png" },
@@ -41,13 +40,6 @@ const Top = () => {
               <img src={imgs[slider].url}/>
             </div>
             <div className='img_item'>
-
-              {/* { imgs.map((img, i)=> (
-                <div className='item_field' key={i} onClick={() => setSlicder(i)}>
-                  <img src={img.url} />
-                </div>
-              )) } */}
-
               {
                 imgs.length && (
                   <Carousel viewportWidth="100%" cellPadding={5}>
@@ -59,11 +51,6 @@ const Top = () => {
                   </Carousel>
                 )
               }
-              {/* <div className="icon_field" onClick={handleSlider}>
-                <div className='icon'>
-                  <BsChevronRight />
-                </div>
-              </div> */}
             </div>
           </Box>
         </Grid>

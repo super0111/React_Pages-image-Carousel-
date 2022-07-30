@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Button } from '@mui/material';
 import Carousel from "react-img-carousel";
 require("react-img-carousel/lib/carousel.css");

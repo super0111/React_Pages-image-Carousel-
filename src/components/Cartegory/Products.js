@@ -1,4 +1,4 @@
-import { Box, Grid, } from '@mui/material';
+import { Grid, } from '@mui/material';
 
 const items1 = [
   { title: "Square GI Pipe", text: "Metal & Alloy", url:"/images/cartegory/product1 (1).png" },
