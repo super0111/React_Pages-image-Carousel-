@@ -13,6 +13,7 @@ import Details2 from "./components/Details2";
 import "./components/content/index.scss";
 import "./components/content/products.scss";
 
+
 function App() {
   return (
     <div className="app">

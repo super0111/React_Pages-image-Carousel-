@@ -47,22 +47,6 @@ const Submit2 = () => {
       }, 400);
     }
   });
-
-  console.log("formik.errors.field1", formik.errors.field1)
-  console.log("formik.errors.field8", formik.errors.field8)
-
-  // useEffect(()=>{
-  //   if(formik.errors.field1 === "Required") {
-  //     setShowHome1(true)
-  //   }
-  // }, [formik.errors.field1])
-
-  // useEffect(()=> {
-  //   if(formik.errors.field8 === "Required") {
-  //     setShowHome2(true)
-  //   }
-  // }, [formik.errors.field8])
-
   
   return (
     <div className="submit2">

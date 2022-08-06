@@ -429,10 +429,9 @@ const Submit3 = () => {
               </Box>
             </div>
           : "" }
-
         </Box>
 
-        <Box 
+        <Box
           sx={{
             backgroundColor: "white",
             marginTop: "30px",
